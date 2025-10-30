@@ -1,10 +1,139 @@
-body {
-  background-color: #f6f6f6;
-  font-family: sans-serif;
-  color: #222;
-  text-align: center;
-  margin-top: 100px;
+/* RESET BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-h1 {
-  color: #8844ff;
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #eaeaea;
+  height: 100vh;
+}
+
+/* STRUTTURA PRINCIPALE */
+.page {
+  display: flex;
+  height: 100vh;
+  border: 4px solid #b483ff; /* bordo lilla */
+}
+
+/* ---------------- COLONNA SINISTRA ---------------- */
+.left-panel {
+  width: 35vw;
+  min-width: 260px;
+  background-image: url("mold.jpg"); /* sostituirai con il nome esatto della tua immagine */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+}
+
+/* MDEF in alto */
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 44px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+/* 25/26 in basso */
+.year {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 44px;
+  font-weight: 500;
+}
+
+/* ---------------- COLONNA DESTRA ---------------- */
+.right-panel {
+  flex: 1;
+  background: linear-gradient(90deg, #dcdcdc 0%, #f7f7f7 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 32px 48px;
+}
+
+/* HEADER CON NOME + TERM */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.name {
+  font-size: 12px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #222;
+  margin-top: 4px;
+}
+
+.terms {
+  display: flex;
+  gap: 50px;
+}
+
+.terms a {
+  text-decoration: none;
+  color: #000;
+  font-size: 30px;
+  letter-spacing: 0.03em;
+}
+
+.terms a:hover {
+  opacity: 0.5;
+}
+
+/* FOOTER IN BASSO */
+.bottom-nav {
+  display: flex;
+  gap: 80px;
+  align-self: flex-end;
+  margin-bottom: 10px;
+}
+
+.bottom-nav a {
+  text-decoration: none;
+  color: #000;
+  font-size: 12px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+.bottom-nav a:hover {
+  opacity: 0.5;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 900px) {
+  .page {
+    flex-direction: column;
+  }
+
+  .left-panel {
+    width: 100%;
+    height: 35vh;
+  }
+
+  .right-panel {
+    height: 65vh;
+    padding: 20px;
+  }
+
+  .terms {
+    gap: 20px;
+  }
+
+  .terms a {
+    font-size: 22px;
+  }
+
+  .bottom-nav {
+    gap: 30px;
+  }
 }
