@@ -19,31 +19,31 @@ body {
 
 /* ---------------- COLONNA SINISTRA ---------------- */
 .left-panel {
-  width: 40vw; /* leggermente più larga */
-  min-width: 300px;
-  background-image: url("images/mold.jpg");
+  width: 36vw;
+  min-width: 260px;
+  background-image: url("images/home-left.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
   color: white;
 }
 
-/* MDEF in alto sinistra */
+/* MDEF in alto a sinistra */
 .logo {
   position: absolute;
-  top: 50px;
-  left: 50px;
+  top: 40px;
+  left: 40px;
   font-size: 48px;
   font-weight: 600;
   letter-spacing: 0.04em;
 }
 
-/* 25/26 in basso sinistra */
+/* 25/26 in basso a sinistra */
 .year {
   position: absolute;
-  bottom: 50px;
-  left: 50px;
-  font-size: 42px;
+  bottom: 40px;
+  left: 40px;
+  font-size: 40px;
   font-weight: 500;
 }
 
@@ -54,40 +54,37 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 50px 80px;
-  position: relative;
+  padding: 48px 60px;
 }
 
-/* Nome e Term in un'area centrale-alta */
+/* barra in alto: nome + menu dei term */
 .top-bar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: flex-start;
-  position: absolute;
-  top: 90px;
-  left: 90px;
-  right: 90px;
+  margin-top: 10px;
 }
 
-/* Nome */
+/* nome in alto a sinistra (colonna destra) */
 .name {
   font-size: 12px;
   letter-spacing: 0.35em;
   text-transform: uppercase;
   color: #111;
-  margin-bottom: 80px; /* distanza tra nome e Term */
+  margin-top: 8px;
 }
 
-/* Term 1 – 2 – 3 */
+/* TERM 1–2–3 */
 .terms {
   display: flex;
-  gap: 100px; /* più distanti fra loro */
+  gap: 60px;
+  margin-top: -5px; /* piccolo riallineamento verticale */
 }
 
 .terms a {
   text-decoration: none;
   color: #000;
-  font-size: 30px;
+  font-size: 26px;
   letter-spacing: 0.03em;
 }
 
@@ -95,14 +92,12 @@ body {
   opacity: 0.5;
 }
 
-/* Footer in basso, centrato orizzontalmente */
+/* footer in basso: about/contact/portfolio */
 .bottom-nav {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
-  gap: 120px;
+  gap: 100px;
+  align-self: flex-end;
+  margin-bottom: 10px;
 }
 
 .bottom-nav a {
@@ -133,12 +128,6 @@ body {
     padding: 20px;
   }
 
-  .top-bar {
-    position: static;
-    margin-top: 20px;
-    align-items: center;
-  }
-
   .terms {
     gap: 20px;
   }
@@ -148,10 +137,6 @@ body {
   }
 
   .bottom-nav {
-    position: static;
-    transform: none;
-    justify-content: center;
     gap: 30px;
-    margin-top: 20px;
   }
 }
