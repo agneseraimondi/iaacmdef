@@ -22,7 +22,7 @@ body {
 .left-panel {
   width: 35vw;
   min-width: 260px;
-  background-image: url("mold.jpg"); /* sostituirai con il nome esatto della tua immagine */
+  background-image: url("images/home-left.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
