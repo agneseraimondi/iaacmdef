@@ -72,12 +72,12 @@ body {
 /* --- SEZIONE TERM 1, 2, 3 --- */
 .terms {
   position: absolute;
-  top: 130px;          /* più in alto */
-  left: 60px;          /* stesso margine sinistro della colonna destra */
-  transform: none;     /* NON centrarlo più */
+  top: 110px;        /* più in alto */
+  left: 40px;        /* più vicino al margine sinistro */
+  transform: none;
   display: flex;
   justify-content: space-between;
-  width: 420px;        /* distanza fra le 3 colonne */
+  width: 360px;      /* colonne più vicine tra loro */
 }
 
 /* ogni colonna TERM */
@@ -137,11 +137,11 @@ body {
 .bottom-nav {
   position: absolute;
   bottom: 60px;
-  left: 60px;              /* stesso allineamento delle colonne */
+  left: 40px;          /* stesso allineamento dei Term */
   transform: none;
   display: flex;
   justify-content: space-between;
-  width: 520px;            /* stessa larghezza dei TERM */
+  width: 360px;        /* uguale ai Term */
 }
 
 .bottom-nav a {
@@ -217,71 +217,4 @@ body {
 
 /* --------------------------------------------- */
 /* PAGINE INTERNE – layout a UNA colonna piena   */
-/* --------------------------------------------- */
-
-.page--inner {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 100vh;
-  background: #f7f7f7;
-  position: relative;
-  padding: 60px;
-}
-
-/* Area principale del contenuto */
-.content-area {
-  max-width: 900px;
-  margin: 0 auto;
-  color: #111;
-}
-
-.content-area .breadcrumb {
-  font-size: 12px;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  margin-bottom: 30px;
-  color: #777;
-}
-
-.content-area h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
-  font-weight: 600;
-}
-
-.content-area p {
-  line-height: 1.6;
-  margin-bottom: 20px;
-  font-size: 16px;
-}
-
-.project-image {
-  width: 100%;
-  max-width: 800px;
-  display: block;
-  margin: 30px auto;
-  border-radius: 8px;
-}
-
-/* Footer fisso in basso a destra */
-.inner-footer {
-  position: absolute;
-  bottom: 60px;
-  right: 60px;
-  display: flex;
-  gap: 40px;
-}
-
-.inner-footer a {
-  text-decoration: none;
-  color: #000;
-  font-size: 12px;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-}
-
-.inner-footer a:hover {
-  opacity: 0.5;
-}
-}
+/* -----*
