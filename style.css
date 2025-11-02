@@ -203,20 +203,25 @@ body {
     text-align: center;
     margin-bottom: 20px;
   }
+
 /* --------------------------------------------- */
 /* PAGINE INTERNE – layout a UNA colonna piena   */
 /* --------------------------------------------- */
 
 .page--inner {
-  display: block;          /* non più flex, elimina la divisione in 2 colonne */
-  background: #f7f7f7;     /* colore di fondo chiaro */
-  min-height: 100vh;       /* sempre piena altezza */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  background: #f7f7f7;
+  position: relative;
+  padding: 60px; /* margine uniforme su tutti i lati */
 }
 
+/* Area principale del contenuto */
 .content-area {
-  max-width: 900px;        /* larghezza massima del testo */
-  margin: 80px auto;       /* centrato orizzontalmente e staccato dall’alto */
-  padding: 0 40px;         /* spazio interno laterale */
+  max-width: 900px;
+  margin: 0 auto; /* centrato orizzontalmente */
   color: #111;
 }
 
@@ -244,7 +249,28 @@ body {
   width: 100%;
   max-width: 800px;
   display: block;
-  margin: 30px 0;
+  margin: 30px auto;
   border-radius: 8px;
+}
+
+/* Footer fisso in basso a destra */
+.inner-footer {
+  position: absolute;
+  bottom: 60px;
+  right: 60px;
+  display: flex;
+  gap: 40px;
+}
+
+.inner-footer a {
+  text-decoration: none;
+  color: #000;
+  font-size: 12px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+.inner-footer a:hover {
+  opacity: 0.5;
 }
 
