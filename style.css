@@ -77,7 +77,7 @@ body {
   transform: none;     /* NON centrarlo più */
   display: flex;
   justify-content: space-between;
-  width: 520px;        /* distanza fra le 3 colonne */
+  width: 420px;        /* distanza fra le 3 colonne */
 }
 
 /* ogni colonna TERM */
