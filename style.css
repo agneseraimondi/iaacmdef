@@ -97,7 +97,7 @@ body {
 .term-block label {
   text-decoration: none;
   color: #000;
-  font-size: 14px; /* font piccolo come nel riferimento */
+  font-size: 16px; /* font piccolo come nel riferimento */
   letter-spacing: 0.05em;
   text-transform: uppercase;
   cursor: pointer;
