@@ -217,4 +217,75 @@ body {
 
 /* --------------------------------------------- */
 /* PAGINE INTERNE – layout a UNA colonna piena   */
-/* -----*
+/* --- PAGINE INTERNE (layout a una colonna con margini) --- */
+.page--inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  background: #f7f7f7;
+  position: relative;
+  padding: 60px; /* margine uniforme su tutti i lati */
+}
+
+/* Area di testo principale */
+.content-area {
+  max-width: 900px;
+  margin: 60px auto 100px auto; /* spazio sopra e sotto */
+  padding: 0 80px; /* margini laterali per la lettura */
+  color: #111;
+  line-height: 1.7;
+}
+
+/* Testo del percorso */
+.content-area .breadcrumb {
+  font-size: 12px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  color: #777;
+}
+
+/* Titolo principale */
+.content-area h1 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+/* Paragrafi */
+.content-area p {
+  font-size: 16px;
+  margin-bottom: 24px;
+  line-height: 1.7;
+}
+
+/* Immagini del progetto */
+.project-image {
+  width: 100%;
+  max-width: 800px;
+  display: block;
+  margin: 40px auto;
+  border-radius: 8px;
+}
+
+/* Footer in basso a destra */
+.inner-footer {
+  position: absolute;
+  bottom: 60px;
+  right: 60px;
+  display: flex;
+  gap: 40px;
+}
+
+.inner-footer a {
+  text-decoration: none;
+  color: #000;
+  font-size: 12px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+.inner-footer a:hover {
+  opacity: 0.5;
+}
