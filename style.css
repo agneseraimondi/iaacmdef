@@ -72,12 +72,12 @@ body {
 /* --- SEZIONE TERM 1, 2, 3 --- */
 .terms {
   position: absolute;
-  top: 42%; /* più in alto */
-  left: 82%; /* sposta le tre colonne verso sinistra */
-  transform: translate(0, -50%);
+  top: 130px;          /* più in alto */
+  left: 60px;          /* stesso margine sinistro della colonna destra */
+  transform: none;     /* NON centrarlo più */
   display: flex;
   justify-content: space-between;
-  width: 520px; /* larghezza totale delle tre colonne */
+  width: 520px;        /* distanza fra le 3 colonne */
 }
 
 /* ogni colonna TERM */
@@ -137,11 +137,11 @@ body {
 .bottom-nav {
   position: absolute;
   bottom: 60px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 60px;              /* stesso allineamento delle colonne */
+  transform: none;
   display: flex;
   justify-content: space-between;
-  width: 520px; /* identica larghezza alle colonne Term */
+  width: 520px;            /* stessa larghezza dei TERM */
 }
 
 .bottom-nav a {
@@ -283,4 +283,5 @@ body {
 
 .inner-footer a:hover {
   opacity: 0.5;
+}
 }
