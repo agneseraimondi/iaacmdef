@@ -19,8 +19,7 @@ body {
 
 /* ---------------- COLONNA SINISTRA ---------------- */
 .left-panel {
-  width: 40vw; /* leggermente più larga */
-  min-width: 300px;
+  width: 50vw; /* ora metà esatta dello schermo */
   background-image: url("images/home-left.jpg");
   background-size: cover;
   background-position: center;
@@ -28,10 +27,10 @@ body {
   color: white;
 }
 
-/* MDEF in alto sinistra */
+/* MDEF sopra 25/26 */
 .logo {
   position: absolute;
-  top: 50px;
+  bottom: 110px;
   left: 50px;
   font-size: 48px;
   font-weight: 600;
@@ -49,39 +48,34 @@ body {
 
 /* ---------------- COLONNA DESTRA ---------------- */
 .right-panel {
-  flex: 1;
+  width: 50vw; /* altra metà */
   background: linear-gradient(90deg, #dcdcdc 0%, #f7f7f7 100%);
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 50px 80px;
-  position: relative;
 }
 
-/* Nome e Term in un'area centrale-alta */
-.top-bar {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  position: absolute;
-  top: 90px;
-  left: 90px;
-  right: 90px;
-}
-
-/* Nome */
+/* NOME (spostato verso destra, stesso asse del TERM 3) */
 .name {
+  position: absolute;
+  top: 60px;
+  right: 80px;
   font-size: 12px;
   letter-spacing: 0.35em;
   text-transform: uppercase;
   color: #111;
-  margin-bottom: 80px; /* distanza tra nome e Term */
 }
 
-/* Term 1 – 2 – 3 */
+/* TERM 1–2–3: allineati con il footer */
 .terms {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
   display: flex;
-  gap: 100px; /* più distanti fra loro */
+  justify-content: space-between;
+  width: 600px; /* controlla questa misura per allineare perfettamente con il footer */
 }
 
 .terms a {
@@ -95,14 +89,15 @@ body {
   opacity: 0.5;
 }
 
-/* Footer in basso, centrato orizzontalmente */
+/* Footer in basso con ABOUT/CONTACT/PORTFOLIO */
 .bottom-nav {
   position: absolute;
   bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 120px;
+  justify-content: space-between;
+  width: 600px; /* stessa larghezza dei term */
 }
 
 .bottom-nav a {
@@ -123,8 +118,12 @@ body {
     flex-direction: column;
   }
 
-  .left-panel {
+  .left-panel,
+  .right-panel {
     width: 100%;
+  }
+
+  .left-panel {
     height: 35vh;
   }
 
@@ -133,18 +132,12 @@ body {
     padding: 20px;
   }
 
-  .top-bar {
-    position: static;
-    margin-top: 20px;
-    align-items: center;
-  }
-
   .terms {
+    position: static;
+    transform: none;
+    justify-content: center;
     gap: 20px;
-  }
-
-  .terms a {
-    font-size: 22px;
+    width: auto;
   }
 
   .bottom-nav {
@@ -152,6 +145,13 @@ body {
     transform: none;
     justify-content: center;
     gap: 30px;
+    width: auto;
     margin-top: 20px;
+  }
+
+  .name {
+    position: static;
+    text-align: center;
+    margin-bottom: 20px;
   }
 }
