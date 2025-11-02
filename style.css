@@ -203,4 +203,48 @@ body {
     text-align: center;
     margin-bottom: 20px;
   }
+/* --------------------------------------------- */
+/* PAGINE INTERNE – layout a UNA colonna piena   */
+/* --------------------------------------------- */
+
+.page--inner {
+  display: block;          /* non più flex, elimina la divisione in 2 colonne */
+  background: #f7f7f7;     /* colore di fondo chiaro */
+  min-height: 100vh;       /* sempre piena altezza */
 }
+
+.content-area {
+  max-width: 900px;        /* larghezza massima del testo */
+  margin: 80px auto;       /* centrato orizzontalmente e staccato dall’alto */
+  padding: 0 40px;         /* spazio interno laterale */
+  color: #111;
+}
+
+.content-area .breadcrumb {
+  font-size: 12px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  color: #777;
+}
+
+.content-area h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.content-area p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.project-image {
+  width: 100%;
+  max-width: 800px;
+  display: block;
+  margin: 30px 0;
+  border-radius: 8px;
+}
+
