@@ -48,34 +48,35 @@ body {
 
 /* ---------------- COLONNA DESTRA ---------------- */
 .right-panel {
-  width: 50vw; /* altra metà */
+  width: 50vw; /* metà esatta della pagina */
   background: linear-gradient(90deg, #dcdcdc 0%, #f7f7f7 100%);
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 60px; /* cornice uniforme su tutti i lati */
 }
 
-/* NOME (spostato verso destra, stesso asse del TERM 3) */
+/* NOME (alto destro, dentro la cornice) */
 .name {
   position: absolute;
   top: 60px;
-  right: 80px;
-  font-size: 5px; /*(cambiato da 12 a 5) */
+  right: 60px;
+  font-size: 10px;
   letter-spacing: 0.35em;
   text-transform: uppercase;
   color: #111;
 }
 
-/* TERM 1–2–3: allineati con il footer */
+/* TERM 1–2–3 centrati e più vicini verticalmente al footer */
 .terms {
   position: absolute;
-  top: 30%; 
+  top: 40%; /* più in alto */
   left: 50%;
-  transform: translate(-50%, -60%);
+  transform: translate(-50%, -50%);
   display: flex;
   justify-content: space-between;
-  width: 600px; /* controlla questa misura per allineare perfettamente con il footer */
+  width: 480px; /* più stretto: colonne più vicine */
 }
 
 .terms a {
@@ -89,15 +90,15 @@ body {
   opacity: 0.5;
 }
 
-/* Footer in basso con ABOUT/CONTACT/PORTFOLIO */
+/* Footer in basso, allineato verticalmente ai Term */
 .bottom-nav {
   position: absolute;
-  bottom: 40px;
+  bottom: 60px; /* stessa distanza dal bordo inferiore della cornice */
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   justify-content: space-between;
-  width: 600px; /* stessa larghezza dei term */
+  width: 480px; /* uguale ai Term, per allineamento perfetto */
 }
 
 .bottom-nav a {
