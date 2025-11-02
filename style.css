@@ -73,7 +73,7 @@ body {
 .terms {
   position: absolute;
   top: 32%; /* più in alto */
-  left: 22%; /* sposta le tre colonne verso sinistra */
+  left: 42%; /* sposta le tre colonne verso sinistra */
   transform: translate(0, -50%);
   display: flex;
   justify-content: space-between;
