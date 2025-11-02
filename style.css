@@ -61,7 +61,7 @@ body {
   position: absolute;
   top: 60px;
   right: 80px;
-  font-size: 12px;
+  font-size: 5px; /*(cambiato da 12 a 5) */
   letter-spacing: 0.35em;
   text-transform: uppercase;
   color: #111;
@@ -81,7 +81,7 @@ body {
 .terms a {
   text-decoration: none;
   color: #000;
-  font-size: 30px;
+  font-size: 25px;
   letter-spacing: 0.03em;
 }
 
