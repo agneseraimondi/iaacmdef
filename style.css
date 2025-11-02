@@ -72,7 +72,7 @@ body {
 /* --- SEZIONE TERM 1, 2, 3 --- */
 .terms {
   position: absolute;
-  top: 110px;        /* più in alto */
+  top: 140px;        /* più in alto */
   left: 40px;        /* più vicino al margine sinistro */
   transform: none;
   display: flex;
