@@ -72,9 +72,9 @@ body {
 /* --- SEZIONE TERM 1, 2, 3 --- */
 .terms {
   position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 32%; /* più in alto */
+  left: 22%; /* sposta le tre colonne verso sinistra */
+  transform: translate(0, -50%);
   display: flex;
   justify-content: space-between;
   width: 520px; /* larghezza totale delle tre colonne */
