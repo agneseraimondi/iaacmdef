@@ -9,6 +9,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: #eaeaea;
   height: 100vh;
+  color: #000;
 }
 
 /* STRUTTURA PRINCIPALE */
@@ -19,7 +20,7 @@ body {
 
 /* ---------------- COLONNA SINISTRA ---------------- */
 .left-panel {
-  width: 50vw; /* metà esatta dello schermo */
+  width: 50vw;
   background-image: url("images/home-left.jpg");
   background-size: cover;
   background-position: center;
@@ -48,13 +49,13 @@ body {
 
 /* ---------------- COLONNA DESTRA ---------------- */
 .right-panel {
-  width: 50vw; /* metà esatta della pagina */
-  background: linear-gradient(90deg, #dcdcdc 0%, #f7f7f7 100%);
+  width: 50vw;
+  background: #f7f7f7;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 60px; /* cornice uniforme su tutti i lati */
+  padding: 60px;
 }
 
 /* NOME (alto destro, dentro la cornice) */
@@ -71,94 +72,103 @@ body {
 /* --- SEZIONE TERM 1, 2, 3 --- */
 .terms {
   position: absolute;
-  top: 38%; /* posizione verticale */
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
   justify-content: space-between;
-  width: 480px; /* larghezza complessiva */
+  width: 520px; /* larghezza totale delle tre colonne */
 }
 
-/* Contenitore di ciascun TERM */
+/* ogni colonna TERM */
 .term-block {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
-/* Nasconde la checkbox */
+/* nasconde checkbox */
 .term-block input {
   display: none;
 }
 
-/* Stile del testo TERM */
+/* stile base del testo TERM */
 .term-block label {
   text-decoration: none;
   color: #000;
-  font-size: 25px;
-  letter-spacing: 0.03em;
+  font-size: 14px; /* font piccolo come nel riferimento */
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
   cursor: pointer;
+  font-weight: 400;
 }
 
 .term-block label:hover {
   opacity: 0.5;
 }
 
-/* Contenuto nascosto di default */
+/* dropdown minimal */
 .term-dropdown {
   display: none;
   flex-direction: column;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.95);
-  padding: 10px 15px;
-  border-radius: 8px;
-  position: absolute;
-  top: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  align-items: flex-start;
+  padding-top: 8px;
+  gap: 4px;
 }
 
-/* Mostra la tendina quando la checkbox è attiva */
 .term-block input:checked + label + .term-dropdown {
   display: flex;
 }
 
-/* Stile dei link nei dropdown */
 .term-dropdown a {
   text-decoration: none;
   color: #000;
-  font-size: 14px;
+  font-size: 12px;
   letter-spacing: 0.05em;
-  margin: 5px 0;
+  opacity: 0.8;
 }
 
 .term-dropdown a:hover {
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
-/* Footer in basso, allineato verticalmente ai Term */
+/* --- FOOTER --- */
 .bottom-nav {
   position: absolute;
-  bottom: 60px; /* stessa distanza dal bordo inferiore della cornice */
+  bottom: 60px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   justify-content: space-between;
-  width: 480px; /* uguale ai Term, per allineamento perfetto */
+  width: 520px; /* identica larghezza alle colonne Term */
 }
 
 .bottom-nav a {
   text-decoration: none;
   color: #000;
-  font-size: 12px;
+  font-size: 10px;
   letter-spacing: 0.25em;
   text-transform: uppercase;
+  font-weight: 400;
 }
 
 .bottom-nav a:hover {
   opacity: 0.5;
+}
+
+/* Allineamento perfetto tra Term e Footer */
+.term-block:nth-child(1),
+.bottom-nav a:nth-child(1) {
+  text-align: left;
+}
+.term-block:nth-child(2),
+.bottom-nav a:nth-child(2) {
+  text-align: center;
+}
+.term-block:nth-child(3),
+.bottom-nav a:nth-child(3) {
+  text-align: right;
 }
 
 /* ---------------- RESPONSIVE ---------------- */
@@ -203,6 +213,7 @@ body {
     text-align: center;
     margin-bottom: 20px;
   }
+}
 
 /* --------------------------------------------- */
 /* PAGINE INTERNE – layout a UNA colonna piena   */
@@ -215,13 +226,13 @@ body {
   min-height: 100vh;
   background: #f7f7f7;
   position: relative;
-  padding: 60px; /* margine uniforme su tutti i lati */
+  padding: 60px;
 }
 
 /* Area principale del contenuto */
 .content-area {
   max-width: 900px;
-  margin: 0 auto; /* centrato orizzontalmente */
+  margin: 0 auto;
   color: #111;
 }
 
@@ -273,4 +284,3 @@ body {
 .inner-footer a:hover {
   opacity: 0.5;
 }
-
