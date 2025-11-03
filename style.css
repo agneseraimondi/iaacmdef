@@ -358,7 +358,7 @@ body {
 
 /* --- SEZIONI DEL PROGETTO (testi interni) --- */
 .project-section {
-  max-width: 800px;
+  max-width: 900px;
   margin: 80px auto;
   padding: 0 80px; /* allinea con il testo principale */
 }
