@@ -231,7 +231,7 @@ body {
 .content-area {
   max-width: 900px;
   margin: 60px auto 100px auto; /* spazio sopra e sotto */
-  padding: 0 80px; /* margini laterali per la lettura */
+  padding: 0 40px; /* margini laterali per la lettura */
   color: #111;
   line-height: 1.7;
 }
