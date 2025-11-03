@@ -338,25 +338,24 @@ body {
     padding-left: 20px;
   }
 }
-/* --- VIDEO VIMEO EMBED RESPONSIVE --- */
+/* --- VIDEO VIMEO EMBED RESPONSIVE (versione stabile) --- */
 .video-container {
   position: relative;
-  padding-bottom: 56.25%; /* proporzione 16:9 */
-  height: 0;
-  overflow: hidden;
+  width: 100%;
   max-width: 800px;
-  margin: 40px auto; /* centrato come le immagini */
+  aspect-ratio: 16 / 9; /* mantiene proporzioni senza height: 0 */
+  margin: 40px auto;
   border-radius: 8px;
+  overflow: hidden;
 }
 
 .video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   border: none;
+  display: block;
 }
+
 /* --- SEZIONI DEL PROGETTO (testi interni) --- */
 .project-section {
   max-width: 800px;
