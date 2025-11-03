@@ -221,7 +221,7 @@ body {
 .page--inner {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   min-height: 100vh;
   background: #f7f7f7;
   position: relative;
