@@ -8,7 +8,7 @@
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: #f7f7f7;
-  min-height: 100%;     /* si estende su tutta la pagina */
+  min-height: 100%;
   color: #000;
 }
 
@@ -63,7 +63,7 @@ body {
   position: absolute;
   top: 60px;
   right: 60px;
-  font-size: 10px;
+  font-size: 9px;               /* più piccolo */
   letter-spacing: 0.35em;
   text-transform: uppercase;
   color: #111;
@@ -72,20 +72,21 @@ body {
 /* --- SEZIONE TERM 1, 2, 3 --- */
 .terms {
   position: absolute;
-  top: 140px;        /* più in alto */
-  left: 40px;        /* più vicino al margine sinistro */
-  transform: none;
+  top: 140px;                   /* sposta in su/giù da qui */
+  left: 40px;                   /* margine sinistro */
   display: flex;
   justify-content: space-between;
-  width: 360px;      /* colonne più vicine tra loro */
+  align-items: flex-start;
+  width: 360px;                 /* larghezza riga dei 3 TERM */
 }
 
 /* ogni colonna TERM */
 .term-block {
-  position: relative;
+  position: relative;           /* riferimento per il dropdown */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 110px;                 /* larghezza di ogni colonna */
 }
 
 /* nasconde checkbox */
@@ -97,30 +98,42 @@ body {
 .term-block label {
   text-decoration: none;
   color: #000;
-  font-size: 16px; /* font piccolo come nel riferimento */
+  font-size: 14px;              /* leggermente più piccolo */
   letter-spacing: 0.05em;
   text-transform: uppercase;
   cursor: pointer;
   font-weight: 400;
+  line-height: 1;
 }
 
 .term-block label:hover {
   opacity: 0.5;
 }
 
-/* dropdown minimal */
+/* dropdown: NON spinge il layout (assoluto) */
 .term-dropdown {
+  position: absolute;
+  top: 22px;                    /* distanza sotto “TERM X” */
+  left: 0;
   display: none;
   flex-direction: column;
   align-items: flex-start;
-  padding-top: 8px;
   gap: 4px;
+  padding: 8px 10px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  min-width: 180px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  z-index: 50;
 }
 
+/* Mostra la tendina quando la checkbox è attiva */
 .term-block input:checked + label + .term-dropdown {
   display: flex;
 }
 
+/* Stile dei link nei dropdown */
 .term-dropdown a {
   text-decoration: none;
   color: #000;
@@ -137,17 +150,17 @@ body {
 .bottom-nav {
   position: absolute;
   bottom: 60px;
-  left: 40px;          /* stesso allineamento dei Term */
+  left: 40px;                   /* stesso allineamento dei Term */
   transform: none;
   display: flex;
   justify-content: space-between;
-  width: 360px;        /* uguale ai Term */
+  width: 360px;                 /* uguale ai Term */
 }
 
 .bottom-nav a {
   text-decoration: none;
   color: #000;
-  font-size: 10px;
+  font-size: 9px;               /* più piccolo */
   letter-spacing: 0.25em;
   text-transform: uppercase;
   font-weight: 400;
@@ -224,14 +237,15 @@ body {
   min-height: 100vh;
   background: #f7f7f7;
   position: relative;
-  padding: 60px; /* margine uniforme su tutti i lati */
+  padding: 60px;                /* margine uniforme su tutti i lati */
+  padding-left: 140px;          /* spazio per il menu fisso a sinistra */
 }
 
 /* Area di testo principale */
 .content-area {
   max-width: 900px;
   margin: 60px auto 100px auto; /* spazio sopra e sotto */
-  padding: 0 40px; /* margini laterali per la lettura */
+  padding: 0 40px;              /* margini laterali per la lettura */
   color: #111;
   line-height: 1.7;
 }
@@ -268,7 +282,7 @@ body {
   border-radius: 8px;
 }
 
-/* Footer in basso a destra */
+/* Footer in basso a destra (pagine interne) */
 .inner-footer {
   position: absolute;
   bottom: 60px;
@@ -288,16 +302,17 @@ body {
 .inner-footer a:hover {
   opacity: 0.5;
 }
-/* --- MENU FISSO IN ALTO A SINISTRA --- */
+
+/* --- MENU FISSO IN ALTO A SINISTRA (pagine interne) --- */
 .fixed-index {
-  position: fixed;        /* resta visibile sempre */
+  position: fixed;
   top: 40px;
   left: 40px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
-  z-index: 100;           /* sempre sopra al contenuto */
+  z-index: 100;
 }
 
 .fixed-index .menu-title {
@@ -321,11 +336,6 @@ body {
   opacity: 0.5;
 }
 
-/* Aggiusta i margini del contenuto per evitare sovrapposizione */
-.page--inner {
-  padding-left: 140px; /* lascia spazio per il menu a sinistra */
-}
-
 /* Su mobile: menu centrato in alto */
 @media (max-width: 900px) {
   .fixed-index {
@@ -338,12 +348,13 @@ body {
     padding-left: 20px;
   }
 }
-/* --- VIDEO VIMEO EMBED RESPONSIVE (versione stabile) --- */
+
+/* --- VIDEO VIMEO EMBED RESPONSIVE --- */
 .video-container {
   position: relative;
   width: 100%;
   max-width: 800px;
-  aspect-ratio: 16 / 9; /* mantiene proporzioni senza height: 0 */
+  aspect-ratio: 16 / 9;
   margin: 40px auto;
   border-radius: 8px;
   overflow: hidden;
@@ -360,7 +371,7 @@ body {
 .project-section {
   max-width: 900px;
   margin: 80px auto;
-  padding: 0 80px; /* allinea con il testo principale */
+  padding: 0 80px;             /* allinea con il testo principale */
 }
 
 .project-section h2 {
@@ -381,6 +392,5 @@ body {
 .aligned-video {
   max-width: 800px;
   margin: 40px auto;
-  padding: 0 80px; /* margine laterale uguale ai paragrafi */
+  padding: 0 80px;             /* margine laterale uguale ai paragrafi */
 }
-
